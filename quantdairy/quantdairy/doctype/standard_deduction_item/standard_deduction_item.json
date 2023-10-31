@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-10-30 15:41:11.531094",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deduction_type",
+  "milk_type",
+  "milk_name",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "deduction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Deduction Type",
+   "options": "Liter Wise\nPercentage Wise\nBill Wise"
+  },
+  {
+   "fieldname": "milk_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Milk Type",
+   "options": "Item"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fetch_from": "milk_type.item_name",
+   "fieldname": "milk_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Milk name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-10-30 16:22:02.385204",
+ "modified_by": "Administrator",
+ "module": "quantdairy",
+ "name": "Standard Deduction Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{date}-{supplier}-{##}",
+ "creation": "2023-10-30 13:17:24.321914",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_d4faj",
+  "warehouse_branch",
+  "column_break_vqych",
+  "deduction_status",
+  "section_break_5owpd",
+  "farmer_code",
+  "column_break_gpitl",
+  "farmer_name",
+  "column_break_3vw78",
+  "village",
+  "section_break_nf7px",
+  "deduction_name",
+  "deduction_amount",
+  "paid_amount",
+  "column_break_gznon",
+  "description",
+  "account",
+  "section_break_uuwie",
+  "accountdr",
+  "column_break_qkvq9",
+  "accountcr",
+  "payment_entry_doc"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_d4faj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse_branch",
+   "fieldtype": "Link",
+   "label": "Warehouse / Branch",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_vqych",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "farmer_code.supplier_name",
+   "fieldname": "farmer_name",
+   "fieldtype": "Data",
+   "label": "Farmer Name"
+  },
+  {
+   "fieldname": "column_break_gpitl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "deduction_status",
+   "fieldtype": "Check",
+   "label": "Deduction Status"
+  },
+  {
+   "fieldname": "section_break_5owpd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "farmer_code",
+   "fieldtype": "Link",
+   "label": "Farmer Code",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "column_break_3vw78",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Village"
+  },
+  {
+   "fieldname": "section_break_nf7px",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deduction_name",
+   "fieldtype": "Select",
+   "label": "Deduction Name",
+   "options": "Cattle Feed\nAdvance\nVet/Medicine"
+  },
+  {
+   "fieldname": "deduction_amount",
+   "fieldtype": "Currency",
+   "label": "Deduction Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "column_break_gznon",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_uuwie",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "accountdr",
+   "fieldtype": "Link",
+   "label": "Account(Dr)",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_qkvq9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accountcr",
+   "fieldtype": "Link",
+   "label": "AccountCr",
+   "options": "Account"
+  },
+  {
+   "fieldname": "payment_entry_doc",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "payment_entry_doc"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-30 18:19:12.657012",
+ "modified_by": "Administrator",
+ "module": "quantdairy",
+ "name": "Variable Deduction",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

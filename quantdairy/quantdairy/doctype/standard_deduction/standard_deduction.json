@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{warehouse__branch}",
+ "creation": "2023-10-30 15:39:02.611098",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "warehouse__branch",
+  "column_break_zvzuv",
+  "first_date",
+  "column_break_5xy36",
+  "last_date",
+  "deduction_type_section",
+  "items",
+  "section_break_rgir8",
+  "check_all",
+  "frm_items",
+  "show",
+  "column_break_grqah",
+  "column_break_cjllj",
+  "column_break_y6tzv",
+  "column_break_af2kk",
+  "update_deduction_amt",
+  "section_break_j2vq3"
+ ],
+ "fields": [
+  {
+   "fieldname": "warehouse__branch",
+   "fieldtype": "Link",
+   "label": "Warehouse / Branch",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_zvzuv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "column_break_5xy36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "deduction_type_section",
+   "fieldtype": "Section Break",
+   "label": "Deduction Type"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "options": "Standard Deduction Item"
+  },
+  {
+   "fieldname": "section_break_rgir8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "check_all",
+   "fieldtype": "Button",
+   "label": "Check All"
+  },
+  {
+   "fieldname": "frm_items",
+   "fieldtype": "Table",
+   "options": "Child Deduction Supplier List"
+  },
+  {
+   "fieldname": "show",
+   "fieldtype": "Button",
+   "label": "Calculate Deduction Amt"
+  },
+  {
+   "fieldname": "column_break_grqah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cjllj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_y6tzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_af2kk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "update_deduction_amt",
+   "fieldtype": "Button",
+   "label": "Update Deduction Amt"
+  },
+  {
+   "fieldname": "section_break_j2vq3",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-30 16:33:23.279188",
+ "modified_by": "Administrator",
+ "module": "quantdairy",
+ "name": "Standard Deduction",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
