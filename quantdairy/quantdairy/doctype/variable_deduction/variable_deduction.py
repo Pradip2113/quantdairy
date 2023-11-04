@@ -5,22 +5,31 @@ import frappe
 from frappe.model.document import Document
 
 class VariableDeduction(Document):
-	def before_save(self):
+	def on_submit(self):
 		payment=frappe.new_doc("Payment Entry")
 		payment.payment_type="Pay"
-		payment.mode_of_payment="Cash"
+		payment.mode_of_payment=self.mode_of_payment
 		payment.party_type="Supplier"
 		payment.party=self.farmer_code
 		payment.paid_amount=self.deduction_amount
 		payment.received_amount=self.deduction_amount
 		payment.source_exchange_rate=1
+		payment.paid_to=self.account
 		payment.paid_from="1121 - HDFC OD Bank-1200 - BDF"
+		if(self.reference_no):
+			payment.reference_no=self.reference_no
+		payment.paid_from_account_currency="INR"
 		payment.insert()
-		self.payment_entry_doc=payment.name
+		self.payment_ref_link=payment.name
 		payment.docstatus=1
+		payment.custom_variable_deduction=self.name
 		payment.save()
 
-	def on_trash(self):
-		doc=frappe.get_doc("Payment Entry",self.payment_entry_doc)
-		doc.cancel()
-		frappe.delete_doc("Payment Entry",self.payment_entry_doc,force=True)
+	# def on_cancel(self):
+	# 	frappe.throw(str(self.payment_ref_link))
+	# 	frappe.throw("hi")
+		# doc=frappe.get_doc("Payment Entry",self.payment_entry_doc)
+		# doc.status="Cancelled"
+		# doc.insert()
+		# doc.save()
+		# frappe.delete_doc("Payment Entry",self.payment_entry_doc,force=True)

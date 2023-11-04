@@ -6,3 +6,16 @@ frappe.ui.form.on('Variable Deduction', {
 
 	// }
 });
+
+
+frappe.ui.form.on('Variable Deduction', {
+	setup: function(frm) {
+		frm.set_query("farmer_code", function(doc) {
+			return {
+				filters: [
+				    ['Supplier', 'dcs_id', '=', frm.doc.warehouse_branch],
+				]
+			};
+		});
+	},
+})

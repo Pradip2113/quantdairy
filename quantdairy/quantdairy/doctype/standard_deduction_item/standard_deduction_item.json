@@ -17,7 +17,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Deduction Type",
-   "options": "Liter Wise\nPercentage Wise\nBill Wise"
+   "options": "Litre Wise\nPercentage Wise\nBill Wise"
   },
   {
    "fieldname": "milk_type",
@@ -43,7 +43,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-30 16:22:02.385204",
+ "modified": "2023-10-31 15:00:34.903472",
  "modified_by": "Administrator",
  "module": "quantdairy",
  "name": "Standard Deduction Item",
