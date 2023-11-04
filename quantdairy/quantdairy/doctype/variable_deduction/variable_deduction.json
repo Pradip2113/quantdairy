@@ -25,6 +25,8 @@
   "column_break_pupr3",
   "mode_of_payment",
   "reference_no",
+  "paid_from_account_name",
+  "paid_from_account_company",
   "payment_ref_link",
   "amended_from"
  ],
@@ -147,6 +149,19 @@
    "fieldtype": "Data",
    "label": "Reference No",
    "mandatory_depends_on": "eval:doc.mode_of_payment==\"Bank\" || doc.mode_of_payment==\"Cheque\""
+  },
+  {
+   "default": "HDFC BANK LTD- OD - JAGDALPUR",
+   "fieldname": "paid_from_account_name",
+   "fieldtype": "Link",
+   "label": "Paid From Account Name",
+   "options": "Bank Account"
+  },
+  {
+   "fetch_from": "paid_from_account_name.account",
+   "fieldname": "paid_from_account_company",
+   "fieldtype": "Data",
+   "label": "Paid From Company Account"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -157,7 +172,7 @@
    "link_fieldname": "custom_variable_deduction"
   }
  ],
- "modified": "2023-11-02 16:53:18.595093",
+ "modified": "2023-11-04 11:56:41.569994",
  "modified_by": "Administrator",
  "module": "quantdairy",
  "name": "Variable Deduction",

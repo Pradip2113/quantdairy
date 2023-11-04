@@ -18,4 +18,14 @@ frappe.ui.form.on('Variable Deduction', {
 			};
 		});
 	},
+	paid_from_account_name: function(frm) {
+		frm.set_query("paid_from_account_name", function(doc) {
+			return {
+				filters: [
+				    ['Bank Account', 'is_company_account', '=', true],
+				]
+			};
+		});
+	},
+
 })
