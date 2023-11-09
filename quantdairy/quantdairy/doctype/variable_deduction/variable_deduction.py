@@ -13,12 +13,10 @@ class VariableDeduction(Document):
 		payment.party=self.farmer_code
 		payment.paid_amount=self.deduction_amount
 		payment.received_amount=self.deduction_amount
-		# payment.source_exchange_rate=1
 		payment.paid_to=self.account
 		payment.paid_from=self.paid_from_account_company
 		if(self.reference_no):
 			payment.reference_no=self.reference_no
-		# payment.paid_from_account_currency="INR"
 		payment.insert()
 		self.payment_ref_link=payment.name
 		payment.docstatus=1

@@ -1,14 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-10-30 16:27:04.676237",
+ "creation": "2023-11-09 12:22:55.675450",
+ "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "farmer_id",
   "farmer_name",
-  "milk_type",
   "check"
  ],
  "fields": [
@@ -29,13 +29,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "milk_type",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "MIlk Type",
-   "read_only": 1
-  },
-  {
    "default": "0",
    "fieldname": "check",
    "fieldtype": "Check",
@@ -46,10 +39,10 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-11-07 17:56:26.907421",
+ "modified": "2023-11-09 12:22:55.675450",
  "modified_by": "Administrator",
  "module": "quantdairy",
- "name": "Child Deduction Supplier List",
+ "name": "Child extra rate supplier",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:{warehouse__branch}",
- "creation": "2023-10-30 15:39:02.611098",
+ "creation": "2023-11-09 13:03:18.649412",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -11,8 +11,6 @@
   "warehouse__branch",
   "column_break_zvzuv",
   "first_date",
-  "column_break_5xy36",
-  "last_date",
   "column_break_ocijc",
   "company",
   "deduction_type_section",
@@ -45,62 +43,12 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "first_date",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "From Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_5xy36",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "last_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "To Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "deduction_type_section",
-   "fieldtype": "Section Break",
-   "label": "Deduction Type"
-  },
-  {
-   "fieldname": "items",
-   "fieldtype": "Table",
-   "options": "Standard Deduction Item",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_rgir8",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "check_all",
-   "fieldtype": "Button",
-   "label": "Check All"
-  },
-  {
-   "fieldname": "frm_items",
-   "fieldtype": "Table",
-   "options": "Child Deduction Supplier List"
-  },
-  {
-   "fieldname": "show",
-   "fieldtype": "Button",
-   "label": "Calculate Deduction "
-  },
-  {
-   "fieldname": "section_break_j2vq3",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "deduction",
-   "fieldtype": "Table",
-   "label": "Deduction",
-   "options": "child Stand Deduction List",
+   "label": "Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -117,6 +65,21 @@
    "reqd": 1
   },
   {
+   "fieldname": "deduction_type_section",
+   "fieldtype": "Section Break",
+   "label": "Add Extra Amount"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "options": "Child extra rate Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_rgir8",
+   "fieldtype": "Section Break"
+  },
+  {
    "fieldname": "get_farmer_list",
    "fieldtype": "Button",
    "label": "Get Farmer List"
@@ -124,10 +87,6 @@
   {
    "fieldname": "column_break_xofz7",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "section_break_lvbiz",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "column_break_7wifh",
@@ -144,14 +103,43 @@
   {
    "fieldname": "column_break_goelb",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "check_all",
+   "fieldtype": "Button",
+   "label": "Check All"
+  },
+  {
+   "fieldname": "section_break_lvbiz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "frm_items",
+   "fieldtype": "Table",
+   "options": "Child extra rate supplier"
+  },
+  {
+   "fieldname": "section_break_j2vq3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "show",
+   "fieldtype": "Button",
+   "label": "Get Extra Rate "
+  },
+  {
+   "fieldname": "deduction",
+   "fieldtype": "Table",
+   "options": "child extra rate deduction amt",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-07 12:27:49.504009",
+ "modified": "2023-11-09 13:06:01.367308",
  "modified_by": "Administrator",
  "module": "quantdairy",
- "name": "Standard Deduction",
+ "name": "Apply Extra Rate",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

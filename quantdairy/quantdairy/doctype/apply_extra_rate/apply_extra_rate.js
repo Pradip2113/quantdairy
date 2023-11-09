@@ -1,7 +1,7 @@
 // Copyright (c) 2023, quantdairy and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Standard Deduction', {
+frappe.ui.form.on('Apply Extra Rate', {
 	refresh: function(frm) {
         $('.layout-side-section').hide();
         $('.layout-main-section-wrapper').css('margin-left', '0');
@@ -25,24 +25,11 @@ frappe.ui.form.on('Standard Deduction', {
 		});	
 	}
 });
-frappe.ui.form.on('Standard Deduction Item', {
-    deduction_type: function(frm,cdt,cdn) {
-        var deduction_type_list = [];
-        frm.doc.items.forEach(function(row) {
-            deduction_type_list.push(row.deduction_type);
-        });
-		frm.set_query("deduction_type","items",function(doc, cdt, cdn) {
-			let d = locals[cdt][cdn];
-            return {
-                filters: [
-                    ['Standard Deduction Type', 'name','not in', deduction_type_list],
-                ]
-            };
-        });
-    }
+frappe.ui.form.on('Child extra rate Item', {
+	milk_type: function (frm) {
+		frm.call({
+			method: 'get_milk_item',//function name defined in python
+			doc: frm.doc, //current document
+		});
+	}
 });
-
-
-
-
-

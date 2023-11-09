@@ -19,6 +19,7 @@
   "deduction_name",
   "deduction_amount",
   "account",
+  "payment_ref_link",
   "column_break_gznon",
   "description",
   "company",
@@ -27,7 +28,6 @@
   "reference_no",
   "paid_from_account_name",
   "paid_from_account_company",
-  "payment_ref_link",
   "amended_from"
  ],
  "fields": [
@@ -105,8 +105,9 @@
    "fetch_from": "deduction_name.account",
    "fieldname": "account",
    "fieldtype": "Link",
-   "label": "Account",
+   "label": "Paid to Account Name",
    "options": "Account",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -144,24 +145,24 @@
    "reqd": 1
   },
   {
-   "depends_on": "eval:doc.mode_of_payment==\"Bank\" || doc.mode_of_payment==\"Cheque\"",
    "fieldname": "reference_no",
    "fieldtype": "Data",
    "label": "Reference No",
    "mandatory_depends_on": "eval:doc.mode_of_payment==\"Bank\" || doc.mode_of_payment==\"Cheque\""
   },
   {
-   "default": "HDFC BANK LTD- OD - JAGDALPUR",
+   "default": "HDFC BANK LTD-CA -1977- JAGDALPUR",
    "fieldname": "paid_from_account_name",
    "fieldtype": "Link",
-   "label": "Paid From Account Name",
-   "options": "Bank Account"
+   "label": "Account Name",
+   "options": "Bank Account",
+   "reqd": 1
   },
   {
    "fetch_from": "paid_from_account_name.account",
    "fieldname": "paid_from_account_company",
    "fieldtype": "Data",
-   "label": "Paid From Company Account"
+   "label": "Paid from Company Account"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -172,7 +173,7 @@
    "link_fieldname": "custom_variable_deduction"
   }
  ],
- "modified": "2023-11-04 11:56:41.569994",
+ "modified": "2023-11-04 12:42:43.448444",
  "modified_by": "Administrator",
  "module": "quantdairy",
  "name": "Variable Deduction",

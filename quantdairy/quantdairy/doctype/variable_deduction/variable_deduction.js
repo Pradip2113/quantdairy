@@ -26,6 +26,6 @@ frappe.ui.form.on('Variable Deduction', {
 				]
 			};
 		});
-	},
+	}
 
 })
